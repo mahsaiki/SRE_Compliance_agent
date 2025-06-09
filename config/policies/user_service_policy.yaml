@@ -1,0 +1,24 @@
+policies:
+  - id: "availability-slo"
+    description: "Availability and latency SLO for user-service"
+    service: "user-service"
+    slo:
+      objective: "99.9%"            # Target uptime
+      latency_p95: "300ms"         # 95th-percentile latency
+      window: "30d"
+    sla:
+      objective: "99.5%"            # External SLA commitment
+      window: "30d"
+    on_call:
+      team: "backend-devops"
+      schedule: "weekly"
+      escalation: "PagerDuty"
+    alerts:
+      - name: "HighErrorRate"
+        condition: "error_rate > 0.5%"
+        severity: "critical"
+        notify: "PagerDuty"
+      - name: "HighLatency"
+        condition: "p95_latency > 500ms"
+        severity: "warning"
+        notify: "email" 

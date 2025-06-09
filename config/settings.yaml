@@ -1,0 +1,37 @@
+# API Keys and Integration Settings
+llm:
+  provider: "openrouter"
+  api_key: "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"
+  model: "deepseek/deepseek-r1-0528:free"
+  base_url: "https://openrouter.ai/api/v1/chat/completions"
+
+# Integration Settings
+integrations:
+  pagerduty:
+    enabled: true
+    api_key: ""  # Add your PagerDuty API key here
+  
+  prometheus:
+    enabled: true
+    url: ""  # Add your Prometheus URL here
+  
+  slack:
+    enabled: true
+    webhook_url: ""  # Add your Slack webhook URL here
+
+# Notification Settings
+notifications:
+  default_channels:
+    - "slack"
+    - "email"
+  email:
+    smtp_server: ""
+    smtp_port: 587
+    sender_email: ""
+    sender_password: ""
+
+# Logging Settings
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/sre_agent.log" 

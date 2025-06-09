@@ -1,0 +1,38 @@
+# Core dependencies
+pyyaml>=6.0
+python-dotenv>=0.19.0
+requests>=2.26.0
+pydantic>=2.0.0
+
+# CI/CD Integration
+python-jenkins>=1.7.0
+python-gitlab>=3.0.0
+azure-devops>=7.1.0b4
+PyGithub>=1.55
+
+# Infrastructure Analysis
+kubernetes>=26.1.0
+python-hcl2>=4.3.0
+cfn-lint>=0.59.0
+
+# Monitoring and Logging
+prometheus-api-client>=0.5.0
+elasticsearch>=8.0.0
+grafana-api-client>=0.2.0
+
+# On-Call Integration
+pypd>=1.1.0
+opsgenie-sdk>=2.1.5
+
+# Reporting and Notifications
+slack-sdk>=3.19.0
+pymsteams>=0.2.0
+
+# Testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+# Code Quality
+black>=22.0.0
+flake8>=4.0.0
+mypy>=0.950
